@@ -142,7 +142,7 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me!</span></h2>
 
-        <form action="php/send-email.php" method="POST">
+        <!-- <form action="php/send-email.php" method="POST">
             <div class="input-box">
                 <input type="text" name="name" placeholder="Nom prenom" value="<?php if(isset($_POST['name'])) { echo $_POST['name']; }  ?>">
                 <input type="email" name="email" placeholder="Adresse email" value="<?php if(isset($_POST['email'])) { echo $_POST['email']; } ?>">
@@ -153,9 +153,24 @@
             </div>
             <textarea name="contenu" id="" cols="30" rows="10" placeholder="Votre message"><?php if(isset($_POST['contenu'])) { echo $_POST['contenu']; } ?></textarea>
             <input type="submit" value="Envoyer" class="btn" name="mailform">
+        </form> -->
+        <form onsubmit="emailSend(); this.reset(); return false;">
+            <div class="input-box">
+                <input type="text" id="name" name="name" placeholder="Nom prenom" required>
+                <input type="email" id="email" name="email" placeholder="Adresse email" required>
+            </div>
+            <div class="input-box">
+                <input type="number" id="number" name="number" placeholder="Numéro de téléphone" required>
+                <input type="text" id="objet" name="objet" placeholder="Objet" required>
+            </div>
+            <textarea name="contenu" id="contenu" cols="30" rows="10" placeholder="Votre message" required></textarea>
+            <input type="submit" value="Envoyer" class="btn">
         </form>
     </section>
-    
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
+	<script src="js/contact_form_to_email.js"></script>
 
     <!-- import javascript -->
     <script src="https://unpkg.com/scrollreveal"></script>

@@ -28,13 +28,16 @@ try {
     $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
     $mail->Username   = 'raphael.lebouedec222@gmail.com';                     //SMTP username
-    $mail->Password   = 'wlumsdiqnnjbzwml';                               //SMTP password
+    $mail->Password   = 'quwipahxxooncgzj';                               //SMTP password
+    // $mail->Username = getenv('SMTP_USER');
+    // $mail->Password = getenv('SMTP_PASSWORD');
+    
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Utilisez SSL
     $mail->Port       = 465; // Port pour SSL
 
     //Recipients
     $mail->setFrom('raphael.lebouedec222@gmail.com', 'portfolio');
-    $mail->addAddress('raphael.lebouedec22@gmail.com');     //Add a recipient
+    $mail->addAddress('raphael.lebouedec22@gmail.com', "Raphael");     //Add a recipient
     
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
@@ -45,6 +48,8 @@ try {
     $mail->send();
     echo 'Message has been sent';
     header('location:  #');
+    exit();
 } catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    error_log('Mailer Error: ' . $mail->ErrorInfo); // Log the actual error
+    echo "Message could not be sent. Please try again later.";
 }
