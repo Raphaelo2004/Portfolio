@@ -192,8 +192,17 @@ span {
     margin: 7rem;
 }
 
-.about-img img{
-    width: 35vw;
+.about-icones{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+}
+
+.about-icones img{
+    width: 40%;
+    height: auto;
+    margin: 4em;
+
 }
 
 .heading{
@@ -462,9 +471,6 @@ span {
 
 @media (max-width: 450px) {
     .home-img img{
-        width: 90vw;
-    }
-    .about-img img{
         width: 90vw;
     }
 }
