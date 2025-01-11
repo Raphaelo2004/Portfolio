@@ -435,6 +435,16 @@ span {
         margin-top: 4rem;
     }
 
+    .about-icones{
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-icones img{
+        margin: 1em;
+        width: 20%;
+    }
+
     .portfolio h2{
         margin-bottom: 3rem;
     }

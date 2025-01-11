@@ -14,6 +14,11 @@ body {
     background-color: var(--bg-color);
 }
 
+
+span {
+    color: var(--main-color);
+}
+
 h1 {
     margin: 20px 0;
     text-align: center;
@@ -23,21 +28,31 @@ h1 {
 
 .gallery-ligne1{
     display: flex;
+    justify-content: center;
 }
 
 .gallery-ligne1 div{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    justify-content: center;
+    width: 49%;
 }
 
 .gallery-ligne2 {
-    flex-direction: row;
-    width: 100%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 img{
+    width: 95%;
+    height: auto;
     border-radius: 8px;
     margin: 1em;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    img{
+        margin: 0.25em;
+    }
 }
