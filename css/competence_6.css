@@ -52,6 +52,16 @@ img{
 
 /* responsive */
 @media (max-width: 768px) {
+    
+    .gallery-ligne1{
+        flex-direction: column;
+    }
+    .gallery-ligne1 div{
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
     img{
         margin: 0.25em;
     }
