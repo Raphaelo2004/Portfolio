@@ -188,10 +188,6 @@ span {
     display: inline-block;   
 }
 
-.about-content{
-    margin: 7rem;
-}
-
 .about-icones{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
