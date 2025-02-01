@@ -62,6 +62,10 @@ section{
     cursor: default;
 }
 
+.logo:hover{
+    cursor: pointer;
+}
+
 .navbar a {
     font-size: 1.7rem;
     color: var(--text-color);
