@@ -462,6 +462,10 @@ span {
         margin: 3rem 0;
     }
 
+    section{
+        min-height: 50vh;    
+    }
+
     .home{
         flex-direction: column;
     }
@@ -476,7 +480,7 @@ span {
 
     .home-img img{
         width: 70vw;
-        margin-top: 4rem;
+        margin-top: 1rem;
     }
 
     .about{
