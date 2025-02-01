@@ -23,7 +23,7 @@
             <a href="#home" class="active">Accueil</a>
             <a href="#about">À propos</a>
             <a href="#portfolio">Compétences</a>
-            <a href="#contact">Contact</a>
+            <!-- <a href="#contact">Contact</a> -->
         </nav>
     </header>
     
@@ -40,11 +40,11 @@
                 Explorez ce site et n'hésitez pas à me contacter si vous souhaitez en savoir plus !</p>
             <div class="social-media">
                 <a href="https://www.linkedin.com/in/raphaël-le-bouedec-64251326a"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://www.instagram.com/"><i class='bx bxl-instagram-alt'></i></a>
-                <a href="https://www.facebook.com/"><i class='bx bxl-facebook'></i></a>
-                <a href="https://x.com/"><i class='bx bxl-twitter'></i></a>
+                <a href="https://www.instagram.com/raphael.contactpro/"><i class='bx bxl-instagram-alt'></i></a>
+                <!-- <a href="https://www.facebook.com/"><i class='bx bxl-facebook'></i></a>
+                <a href="https://x.com/"><i class='bx bxl-twitter'></i></a> -->
             </div>
-            <a href="fichiers/CV_portfolio_cours.pdf" class="btn">Ouvrir mon CV</a>
+            <a href="fichiers/CV_fevrier_2025.pdf" class="btn">Ouvrir mon CV</a>
         </div>
         <div class="home-img">
             <img src="images/home.png" alt="home">
@@ -61,7 +61,7 @@
         </div>
         <div class="about-content">
             <h2 class="heading">A propos de <span>Moi</span></h2>
-            <h3>Developpeur Frontend</h3>
+            <h3>Developpeur</h3>
             <p>
                 Je m'appelle Raphaël Le Bouedec j'ai 20 ans, je suis alternant chez ARCHE-MC2 en troisième année de BUT Informatique. 
                 <br/>
@@ -69,7 +69,7 @@
                 <br/>
                 Pour la suite de mes études, je souhaite intégrer une école d'ingénieur dans le développement web.
                 <br/>
-                Lors de mon temps libre j'aime écouter de la musique, cuisiner et faire du sport mais je passe aussi du temps sur mon ordinateur que ce soit pour coder ou même pour jouer.
+                Lors de mon temps libre j'aime écouter de la musique, passer du temps avec mes amis et faire du sport mais je passe aussi du temps sur mon ordinateur que ce soit pour coder ou même pour jouer.
             </p>
             <div class="about-btn-container">
                 <a href="#portfolio" id="see_more" class="btn">Voir Plus</a>
@@ -80,56 +80,93 @@
     <!-- Competences design --> 
     <section class="portfolio" id="portfolio">
         <h2 class="heading">Derniers <span>Projets</span></h2>
+        <div class="filter-container">
+            <button class="filter-btn" data-category="developpement"><p>Développement</p></button>
+            <button class="filter-btn" data-category="gestion-projet"><p>Gestion de Projet</p></button>
+            <button class="filter-btn" data-category="iut"><p>À l'IUT</p></button>
+            <button class="filter-btn" data-category="entreprise"><p>En entreprise</p></button>
+            <button class="filter-btn" data-category="perso"><p>Personnel</p></button>
+            <button class="filter-btn" data-category="individuel"><p>Individuel</p></button>
+            <button class="filter-btn" data-category="equipe"><p>En équipe</p></button>
+        </div>
+
         <div class="portfolio-container">
-            <div class="portfolio-box">
-                <img src="images/image_comp_1_alt.png" alt="Compétence 1">
+            
+            <div class="portfolio-box" data-category="developpement iut equipe">
+                <img src="images/pikachu.webp" alt="projet 1">
                 <div class="portfolio-layer">
-                    <h4>Réaliser :<br/>Mise à jour suite à un décès</h4>
+                    <h4>Pokédex Pokemon</h4>
+                    <!-- <p>Le but de ce projet était de créer une intelligence artificielle capable de jouer au puissance4 </p> -->
+                    <a href="https://github.com/Raphaelo2004/Pokemon"><i class='bx bx-link-external' ></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box" data-category="developpement gestion-projet iut equipe">
+                <img src="images/breizh-ile.png" alt="projet 2">
+                <div class="portfolio-layer">
+                    <h4>Site de locations saisonnières</h4>
+                    <!-- <p>Le but de ce projet était de créer une intelligence artificielle capable de jouer au puissance4 </p> -->
+                    <a href="https://github.com/Alex041718/Breizh-ile"><i class='bx bx-link-external' ></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box" data-category="developpement entreprise individuel">
+                <img src="images/image_comp_1_alt.png" alt="projet 3">
+                <div class="portfolio-layer">
+                    <h4>Mise à jour suite à un décès</h4>
                     <!-- <p>Le problème du cavalier est un problème mathématico-logique fondé sur les déplacements du cavalier du jeu d'échecs : un cavalier partant d'une case quelconque doit visiter chaque case sans y repasser.</p> -->
                     <a href="competences/competence_1/competence_1.html"><i class='bx bx-link-external' ></i></a>
                 </div>
             </div>
 
-            <div class="portfolio-box">
-                <img src="images/puissance4.webp" alt="Compétence 2">
+            <div class="portfolio-box" data-category="developpement iut individuel">
+                <img src="images/puissance4.webp" alt="projet 4">
                 <div class="portfolio-layer">
-                    <h4>Optimiser :<br/>Puissance 4</h4>
+                    <h4>Jeu de Puissance 4</h4>
                     <!-- <p>L'objectif du jeu est d'aligner quatre jetons de sa propre couleur horizontalement, verticalement ou en diagonale. </p> -->
                     <a href="https://github.com/Raphaelo2004/Puissance-4"><i class='bx bx-link-external' ></i></a>
                 </div>
             </div>
 
-            <div class="portfolio-box">
-                <img src="images/ia.avif" alt="Compétence 3">
+            <div class="portfolio-box" data-category="developpement iut equipe">
+                <img src="images/ia.avif" alt="projet 5">
                 <div class="portfolio-layer">
-                    <h4>Administrer :<br/>IA Puissance 4</h4>
+                    <h4>IA Puissance 4</h4>
                     <!-- <p>Le but de ce projet était de créer une intelligence artificielle capable de jouer au puissance4 </p> -->
                     <a href="https://github.com/Raphaelo2004/IA-Puissance-4"><i class='bx bx-link-external' ></i></a>
                 </div>
             </div>
 
-            <div class="portfolio-box">
-                <img src="images/bdd.jpg" alt="Compétence 4">
+            <div class="portfolio-box" data-category="developpement iut equipe">
+                <img src="images/bdd.jpg" alt="projet 6">
                 <div class="portfolio-layer">
-                    <h4>Gérer :<br/>Base de Données</h4>
+                    <h4>Base de Données</h4>
                     <!-- <p>Une base de données est un outil qui permet de collecter et d'organiser des informations. </p> -->
                     <a href="https://github.com/Raphaelo2004/Creation-BDD"><i class='bx bx-link-external' ></i></a>
                 </div>
             </div>
 
-            <div class="portfolio-box">
-                <img src="images/jira.gif" alt="Compétence 5">
+            <div class="portfolio-box" data-category="gestion-projet iut equipe">
+                <img src="images/jira.gif" alt="projet 7">
                 <div class="portfolio-layer">
-                    <h4>Conduire :<br/>Gestion de projet (JIRA)</h4>
+                    <h4>Gestion de projet (JIRA)</h4>
                     <a href="https://raphaellebouedec22-1715671713150.atlassian.net/jira/software/projects/LGB/list"><i class='bx bx-link-external' ></i></a>
                 </div>
             </div>
 
-            <div class="portfolio-box">
-                <img src="images/reunion.png" alt="Compétence 6">
+            <div class="portfolio-box" data-category="gestion-projet entreprise equipe">
+                <img src="images/reunion.png" alt="projet 8">
                 <div class="portfolio-layer">
-                    <h4>Collaborer :<br/>Développement au sein d'un Open Space</h4>
+                    <h4>Gestion de projet (AZURE)</h4>
                     <a href="competences/competence_6/competence_6.html"><i class='bx bx-link-external' ></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box" data-category="developpement iut individuel">
+                <img src="images/tdc3.jpg" alt="projet 9">
+                <div class="portfolio-layer">
+                    <h4>Le tour du cavalier</h4>
+                    <a href="https://github.com/Raphaelo2004/Tour-du-cavalier"><i class='bx bx-link-external' ></i></a>
                 </div>
             </div>
         </div>
@@ -138,8 +175,8 @@
 
     <!-- Contact design -->
 
-    <section class="contact" id="contact">
-        <h2 class="heading">Contactez <span>Moi!</span></h2>
+    <!-- <section class="contact" id="contact">
+        <h2 class="heading">Contactez <span>Moi!</span></h2> -->
 
         <!-- <form action="php/send-email.php" method="POST">
             <div class="input-box">
@@ -153,7 +190,7 @@
             <textarea name="contenu" id="" cols="30" rows="10" placeholder="Votre message"><?php if(isset($_POST['contenu'])) { echo $_POST['contenu']; } ?></textarea>
             <input type="submit" value="Envoyer" class="btn" name="mailform">
         </form> -->
-        <form onsubmit="emailSend(); this.reset(); return false;">
+        <!-- <form onsubmit="emailSend(); this.reset(); return false;">
             <div class="input-box">
                 <input type="text" id="name" name="name" placeholder="Nom prenom" required>
                 <input type="email" id="email" name="email" placeholder="Adresse email" required>
@@ -165,7 +202,7 @@
             <textarea name="contenu" id="contenu" cols="30" rows="10" placeholder="Votre message" required></textarea>
             <input type="submit" value="Envoyer" class="btn">
         </form>
-    </section>
+    </section> -->
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<script src="https://smtpjs.com/v3/smtp.js"></script>

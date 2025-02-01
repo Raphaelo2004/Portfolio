@@ -225,43 +225,93 @@ span {
 }
 
 /* section compétences */
+/* filtres / tris */
+.filter-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+    padding-bottom: 2rem;  
 
-.portfolio{
+}
+.filter-container .filter-btn p{
+    font-size: 1.6rem;
+}
+
+.filter-btn {
+    background-color: lightgray;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.filter-btn.active {
+    background-color: var(--main-color);
+    color: var(--second-bg-color);
+}
+
+/* projets */
+.portfolio-box {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.hidden {
+    display: none !important; 
+
+}
+
+.portfolio {
     background: var(--second-bg-color);
     padding-bottom: 10rem;
 }
 
-.portfolio h2{
+.portfolio h2 {
     margin-bottom: 4rem;
+    text-align: center; 
 }
 
-.portfolio-container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
+.portfolio-container {
+    display: flex;
+    overflow-x: scroll;  
+    overflow-y: hidden;  
     gap: 2.5rem;
+    padding-bottom: 2rem;  
+    scroll-snap-type: x mandatory;  
+    width: 100%;  
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: nowrap; 
+    min-width: 0;
 }
 
-.portfolio-container .portfolio-box{
+.portfolio-container .portfolio-box {
     position: relative;
     border-radius: 2rem;
     box-shadow: 0 0 1rem var(--bg-color);
     overflow: hidden;
     display: flex;
+    flex: 0 0 auto; 
+    width: 350px; 
+    height: 350px; 
+    transform: none !important; 
+    opacity: 1 !important; 
 }
 
-.portfolio-box img{
+.portfolio-box img {
     width: 100%;
-    height: 300px;
-    object-fit: cover; 
+    height: 100%; 
+    object-fit: cover;
     transition: .5s ease;
 }
 
-.portfolio-box:hover img{
+.portfolio-box:hover img {
     transform: scale(1.1);
 }
 
-.portfolio-box .portfolio-layer{
+.portfolio-box .portfolio-layer {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -278,20 +328,24 @@ span {
     transition: .5s ease;
 }
 
-.portfolio-box:hover .portfolio-layer{
+.portfolio-layer{
+    gap: 25px;
+}
+
+.portfolio-box:hover .portfolio-layer {
     transform: translateY(0);
 }
 
-.portfolio-layer h4{
+.portfolio-layer h4 {
     font-size: 3rem;
 }
 
-.portfolio-layer p{
+.portfolio-layer p {
     font-size: 1.6rem;
     margin: .3rem 0 1rem;
 }
 
-.portfolio-layer a{
+.portfolio-layer a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -301,12 +355,10 @@ span {
     border-radius: 50%;
 }
 
-.portfolio-layer a i{
+.portfolio-layer a i {
     font-size: 2rem;
     color: var(--second-bg-color);
-
 }
-
 
 /* section contact */
 
@@ -401,6 +453,7 @@ span {
 
     .navbar.active{
         display: block;
+        text-align: center;
     }
 
     .navbar a{
@@ -445,6 +498,14 @@ span {
         width: 20%;
     }
 
+    .filter-container {
+        flex-direction: column;
+    }
+
+    .filter-btn{
+        margin: 0 25px;
+    }
+
     .portfolio h2{
         margin-bottom: 3rem;
     }
@@ -454,7 +515,7 @@ span {
     }
 
     .home-content, .about-content, .about-content h2{
-        text-align: center; /* Centre le contenu horizontalement */
+        text-align: center; 
     }
     
     .btn{

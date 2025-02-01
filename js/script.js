@@ -61,3 +61,33 @@ const typed = new Typed('.multiple-text', {
     loop: true
 });
 
+// gestion des filtres sur les catégories d'un projet
+const filterButtons = document.querySelectorAll(".filter-btn");
+const portfolioBoxes = document.querySelectorAll(".portfolio-box");
+
+function filterProjects() {
+    const selectedCategories = Array.from(filterButtons)
+        .filter(button => button.classList.contains("active"))
+        .map(button => button.dataset.category);
+
+    portfolioBoxes.forEach(box => {
+        const boxCategories = box.dataset.category ? box.dataset.category.split(" ") : [];
+
+        const isVisible = selectedCategories.length === 0 || selectedCategories.every(category => boxCategories.includes(category));
+
+        if (isVisible) {
+            box.classList.remove("hidden");
+        } else {
+            box.classList.add("hidden");
+        }
+    });
+}
+
+filterButtons.forEach(button => {
+    button.addEventListener("click", function () {
+        this.classList.toggle("active"); 
+        filterProjects(); 
+    });
+});
+
+filterProjects();
