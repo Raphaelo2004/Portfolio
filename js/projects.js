@@ -31,8 +31,8 @@ const PROJECTS = [
         image: "images/ia.avif",
         title: { fr: "IA Puissance 4", en: "Connect Four AI" },
         description: {
-            fr: "Intelligence artificielle qui joue au Puissance 4 grâce à l'algorithme minimax avec élagage alpha-bêta.",
-            en: "Artificial intelligence playing Connect Four using the minimax algorithm with alpha-beta pruning."
+            fr: "Bot codé en binôme pour affronter un joueur au Puissance 4 : il choisit son coup selon des règles que nous avons définies pour chaque situation de jeu.",
+            en: "Bot coded in a pair to play Connect Four against a human: it picks its move based on rules we defined for each game situation."
         },
         tags: ["C", "Algorithmique"],
         context: "iut", team: true, year: 2023,
