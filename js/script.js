@@ -48,46 +48,27 @@ ScrollReveal({
 });
 
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-ScrollReveal().reveal('.home-img, .portfolio-box, .contact form', { origin: 'bottom' });
+ScrollReveal().reveal('.home-img, .project-card, .contact-card', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
 //typed js
-const typed = new Typed('.multiple-text', {
-    strings : ['Développeur','Sportif','Actif'],
-    typeSpeed: 100,
-    backSpeed: 100,
-    backDelay: 100,
-    loop: true
-});
+// les textes viennent de i18n.js et l'animation est relancée à chaque changement de langue
+let typed = null;
 
-// gestion des filtres sur les catégories d'un projet
-const filterButtons = document.querySelectorAll(".filter-btn");
-const portfolioBoxes = document.querySelectorAll(".portfolio-box");
-
-function filterProjects() {
-    const selectedCategories = Array.from(filterButtons)
-        .filter(button => button.classList.contains("active"))
-        .map(button => button.dataset.category);
-
-    portfolioBoxes.forEach(box => {
-        const boxCategories = box.dataset.category ? box.dataset.category.split(" ") : [];
-
-        const isVisible = selectedCategories.length === 0 || selectedCategories.every(category => boxCategories.includes(category));
-
-        if (isVisible) {
-            box.classList.remove("hidden");
-        } else {
-            box.classList.add("hidden");
-        }
+function startTyped() {
+    if (typed) typed.destroy();
+    typed = new Typed('.multiple-text', {
+        strings : I18N.t('home.typed'),
+        typeSpeed: 100,
+        backSpeed: 100,
+        backDelay: 100,
+        loop: true
     });
 }
 
-filterButtons.forEach(button => {
-    button.addEventListener("click", function () {
-        this.classList.toggle("active"); 
-        filterProjects(); 
-    });
-});
+startTyped();
+document.addEventListener('langchange', startTyped);
 
-filterProjects();
+// année du pied de page
+document.querySelectorAll('.footer-year').forEach(el => el.textContent = new Date().getFullYear());
