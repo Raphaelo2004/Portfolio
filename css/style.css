@@ -215,7 +215,7 @@ span {
 /* about section */
 .about{
     display: flex;
-    justify-self: center;
+    justify-content: center;
     align-items: center;
     gap: 2rem;
     background: var(--bg-color);
@@ -250,7 +250,32 @@ span {
 
 .about-content p{
     font-size: 1.6rem;
+    line-height: 1.8;
     margin: 2rem 0 3rem;
+    color: rgba(255, 255, 255, .85);
+}
+
+/* mots importants surlignés */
+.about-content p strong{
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+/* encadré de recherche de stage */
+.about-lead{
+    display: block;
+    margin-bottom: 2rem;
+    padding: 1.4rem 1.8rem;
+    border-left: .4rem solid var(--main-color);
+    border-radius: 1rem;
+    background: var(--second-bg-color);
+    color: var(--text-color);
+}
+
+.about-lead i{
+    color: var(--main-color);
+    margin-right: .4rem;
+    vertical-align: middle;
 }
 
 /* section projets */
@@ -563,6 +588,10 @@ a.contact-card:hover{
 
     .home-content, .about-content, .about-content h2{
         text-align: center;
+    }
+
+    .about-lead{
+        text-align: left;
     }
 
     .home-actions{

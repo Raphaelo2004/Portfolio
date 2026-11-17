@@ -31,13 +31,12 @@
 
             "about.title": "À propos de <span>Moi</span>",
             "about.text":
-                "Je m'appelle Raphaël Le Bouedec, j'ai " + age + " ans et je suis en cycle d'ingénieur informatique par apprentissage à l'ISEN Ouest de Brest. " +
-                "En parallèle, je suis analyste développeur en alternance à l'IFREMER, où je recense les besoins puis conçois et développe des outils pour la DAEI." +
+                "<span class='about-lead'><i class='bx bx-world'></i> Je suis actuellement à la recherche d'un <strong>stage à l'international de 3 mois</strong>, <strong>de juillet à septembre 2027</strong>, afin d'enrichir mon expérience et de travailler dans un environnement anglophone (<strong>TOEIC : 870 points</strong>).</span>" +
+                "Je m'appelle <strong>Raphaël Le Bouedec</strong>, j'ai " + age + " ans et je suis en <strong>cycle d'ingénieur informatique</strong> par apprentissage à l'<strong>ISEN Ouest</strong> de Brest. " +
+                "En parallèle, je suis <strong>analyste développeur</strong> en alternance à l'<strong>IFREMER</strong>, où je recense les besoins puis conçois et développe des outils pour la DAEI (Direction des affaires européennes et internationales)." +
                 "<br/><br/>" +
-                "Auparavant, j'ai obtenu mon BUT Informatique mention bien à l'IUT de Lannion, pendant lequel j'ai été développeur logiciel en alternance chez Arche MC2 sur le progiciel Solis. " +
+                "Auparavant, j'ai obtenu mon <strong>BUT Informatique</strong> mention bien à l'IUT de Lannion, pendant lequel j'ai été <strong>développeur logiciel</strong> en alternance chez <strong>Arche MC2</strong> sur le progiciel Solis. " +
                 "Avant cela, j'ai obtenu un bac général mention bien avec les spécialités Mathématiques et NSI et l'option Mathématiques expertes." +
-                "<br/><br/>" +
-                "Je suis actuellement à la recherche d'un stage à l'international afin d'enrichir mon expérience et de travailler dans un environnement anglophone (TOEIC : 870 points)." +
                 "<br/><br/>" +
                 "Pendant mon temps libre, je joue au football, j'écoute de la musique et je passe du temps avec mes amis, mais aussi sur mon ordinateur, que ce soit pour coder ou pour jouer.",
 
@@ -70,13 +69,12 @@
 
             "about.title": "About <span>Me</span>",
             "about.text":
-                "My name is Raphaël Le Bouedec, I am " + age + " years old and I am a computer science engineering student in a work-study program at ISEN Ouest in Brest, France. " +
-                "Alongside my studies, I work as an apprentice analyst developer at IFREMER (French Research Institute for Exploitation of the Sea), where I gather requirements, then design and develop tools for the DAEI." +
+                "<span class='about-lead'><i class='bx bx-world'></i> I am currently looking for a <strong>3-month international internship</strong>, <strong>from July to September 2027</strong>, to broaden my experience and work in an English-speaking environment (<strong>TOEIC: 870 points</strong>).</span>" +
+                "My name is <strong>Raphaël Le Bouedec</strong>, I am " + age + " years old and I am a <strong>computer science engineering student</strong> in a work-study program at <strong>ISEN Ouest</strong> in Brest, France. " +
+                "Alongside my studies, I work as an <strong>apprentice analyst developer</strong> at <strong>IFREMER</strong> (French Research Institute for Exploitation of the Sea), where I gather requirements, then design and develop tools for the DAEI (Department of European and International Affairs)." +
                 "<br/><br/>" +
-                "Before that, I earned my BUT (Bachelor of Technology) in Computer Science with honors at IUT Lannion, during which I worked as an apprentice software developer at Arche MC2 on the Solis software. " +
+                "Before that, I earned my <strong>BUT (Bachelor of Technology) in Computer Science</strong> with honors at IUT Lannion, during which I worked as an <strong>apprentice software developer</strong> at <strong>Arche MC2</strong> on the Solis software. " +
                 "Previously, I obtained my French general baccalaureate with honors, specializing in Mathematics and Computer Science, with Advanced Mathematics as an option." +
-                "<br/><br/>" +
-                "I am currently looking for an international internship to broaden my experience and work in an English-speaking environment (TOEIC: 870 points)." +
                 "<br/><br/>" +
                 "In my free time, I play football, listen to music and spend time with my friends, as well as on my computer, whether coding or gaming.",
 

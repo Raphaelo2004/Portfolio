@@ -6,7 +6,7 @@
 
 const PROJECTS = [
     {
-        image: "images/ameli.png",
+        image: "images/amelie.png",
         title: { fr: "Plateforme de jeux (AMÉLI)", en: "Games platform (AMELI)" },
         description: {
             fr: "Serious game de 5 mini-jeux pour sensibiliser les 18-25 ans aux services de la CPAM.",
